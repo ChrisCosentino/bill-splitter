@@ -18,11 +18,7 @@ const Radio = ({ keys, onChange }) => {
             type='radio'
             name='radioForm'
             value={i.value}
-            // id={i.label}
             onChange={(e) => onValueChange(e.target.value)}
-            // onChange={onValueChange}
-
-            // onChange={(e) => onChange(parseFloat(e.target.value))}
           />
         ))}
         <Input onChange={(e) => onValueChange(e / 100)} placeholder='Custom' />

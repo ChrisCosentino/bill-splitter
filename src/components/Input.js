@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-// import ico from '../images/icon-dollar.svg';
 
 const Input = ({ label, icon, placeholder, onChange, value }) => {
   return (
