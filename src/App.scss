@@ -33,11 +33,9 @@ body {
   height: 100vh;
   background-color: #c5e4e8;
   padding-top: 200px;
-  //   #C4E3E7
-  //   display: flex;
-  //   justify-content: center;
-  //   align-items: center;
-  //   flex-direction: column;
+  @media screen and (max-width: 375px) {
+    padding-top: 120px;
+  }
 
   .appTitle {
     text-align: center;
@@ -45,7 +43,6 @@ body {
     text-transform: uppercase;
     letter-spacing: 2px;
     color: $light-dark-grey;
-    // color: $dark-text;
   }
 }
 
@@ -59,13 +56,13 @@ body {
   margin-bottom: auto;
   border-radius: $border-radius;
   gap: 1rem;
+
+  @media screen and (max-width: 375px) {
+    flex-direction: column;
+  }
   .col {
     flex: 1;
   }
-
-  .formContainer {
-  }
-
   .totalCard {
     background-color: $secondary-color;
     padding: 16px;
@@ -92,6 +89,10 @@ body {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 6px;
+
+  @media screen and (max-width: 375px) {
+    grid-template-columns: 1fr 1fr;
+  }
   .radioBtn {
     appearance: none;
     outline: none;
@@ -160,6 +161,7 @@ body {
 
   .amount {
     font-size: 32px;
+    color: $light-dark-grey;
   }
 }
 
