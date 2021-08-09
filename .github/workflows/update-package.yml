@@ -1,6 +1,10 @@
 name: Update-Package
 
-on: push
+on: 
+  push:
+    branches: 
+      -"master"
+
 
 jobs: 
   updatePackage: 
