@@ -16,7 +16,7 @@ jobs:
         with: 
           node-version: '14'
       - name: 'Update version'
-        run: 
+        run: |
           npm version patch -m 'update version'
           git add .
           git config user.name github-actions
