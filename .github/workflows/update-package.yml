@@ -12,9 +12,12 @@ jobs:
     steps: 
       - name: "Checkout code"
         uses: actions/checkout@v2
-      - uses: actions/setup-node@v2
+      - name: 'cat package.json'
+        run: cat ./package.json
+      - name: 'setup nodejs'
+        uses: actions/setup-node@v2
         with: 
-          node-version: '14'
+          node-version: '12'
       - name: 'Commit files'
         run: |
           git config --global user.email "you@example.com"
