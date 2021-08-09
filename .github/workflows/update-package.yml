@@ -15,13 +15,14 @@ jobs:
       - uses: actions/setup-node@v2
         with: 
           node-version: '14'
-      - name: 'Update Version'
-        run: npm version patch -m 'update version' 
       - name: 'Commit files'
         run: |
-          git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git config --local user.name "github-actions[bot]"
-          git commit -m "Add changes" -a
+          npm version patch -m 'update version' 
+          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git config --global user.name "github-actions[bot]"
+          git add -A
+          git commit -m "Add changes"
+          git push
       - name: "Push Changes"
         uses: ad-m/github-push-action@master
         with: 
