@@ -20,12 +20,13 @@ jobs:
           git config --local user.name github-actions
           git config --local user.email github-actions@github.com
           npm version patch -m 'update version' 
-          git add .
           git commit -am "Update version"
-          git push
+      - name: "Push Changes"
+        uses: ad-m/github-push-action@master
+        with: 
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: ${{ github.ref }}
         
-      - name: "cat package.json"
-        run: cat ./package.json
         
         
   
