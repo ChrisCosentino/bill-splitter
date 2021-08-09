@@ -17,11 +17,11 @@ jobs:
           node-version: '14'
       - name: 'Update version'
         run: 
-          npm version patch
+          npm version patch -m 'update version'
           git add .
           git config user.name github-actions
           git config user.email github-actions@github.com
-          git commit -am "File Replicated from Project A"
+          git commit -am "Update version"
           git push
         
       - name: "cat package.json"
