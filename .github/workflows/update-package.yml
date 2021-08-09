@@ -18,8 +18,8 @@ jobs:
       - name: 'Commit files'
         run: |
           npm version patch -m 'update version' 
-          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git config --global user.name "github-actions[bot]"
+          git config --global user.email "masterEmail@github.com"
+          git config --global user.name "masterActions"
           git add -A
           git commit -m "Bump version"
           git push
