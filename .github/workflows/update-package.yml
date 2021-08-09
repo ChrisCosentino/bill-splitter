@@ -17,10 +17,9 @@ jobs:
           node-version: '14'
       - name: 'Update version'
         run: |
-          git config user.name github-actions
-          git config user.email github-actions@github.com
-          npm version patch -m 'update version'
-          git add .
+          git config --local user.name github-actions
+          git config --local user.email github-actions@github.com
+          npm version patch -m 'update version'    
           git commit -am "Update version"
           git push
         
