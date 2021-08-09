@@ -7,6 +7,7 @@ import iconDollar from './images/icon-dollar.svg';
 import iconPerson from './images/icon-person.svg';
 
 import TotalAmount from './components/TotalAmount';
+// Radios
 
 import './App.scss';
 
