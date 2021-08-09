@@ -24,10 +24,3 @@ jobs:
           git config --global user.name "Your Name"
           npm version patch -m 'update version' 
           git push
-          git add -A
-          git commit -m "Bump version"
-          git push
-        
-        
-        
-  
