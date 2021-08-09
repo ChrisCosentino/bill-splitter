@@ -1,0 +1,9 @@
+name: Update-Package
+
+on: push
+
+jobs: 
+  updatePackage: 
+    steps: 
+      - name: Checkout code
+        uses: actions/checkout@v2
