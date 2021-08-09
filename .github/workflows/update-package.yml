@@ -17,9 +17,9 @@ jobs:
           node-version: '14'
       - name: 'Commit files'
         run: |
-          npm version patch -m 'update version' 
           git config --global user.email "you@example.com"
           git config --global user.name "Your Name"
+          npm version patch -m 'update version' 
           git add -A
           git commit -m "Bump version"
           git push
