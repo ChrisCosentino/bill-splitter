@@ -18,7 +18,7 @@ jobs:
           node-version: '12'
       - name: 'Commit files'
         run: |
-          git config --global user.email "you@example.com"
-          git config --global user.name "Your Name"
+          git config --global user.email "chriscosentino@hotmail.com"
+          git config --global user.name "ChrisCosentino"
           npm version patch -m 'update version' 
           git push
