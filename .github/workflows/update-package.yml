@@ -21,4 +21,4 @@ jobs:
           git config --global user.email "chriscosentino@hotmail.com"
           git config --global user.name "ChrisCosentino"
           npm version patch -m 'update version' 
-          git push -f
+          git push --force
