@@ -29,7 +29,7 @@ jobs:
         with: 
           token: ${{ secrets.PUSH_TO_PROTECTED }}
           branch: master
-          unprotected_reviews: true
+          unprotect_reviews: true
           
 
 
