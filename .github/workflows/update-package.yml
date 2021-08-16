@@ -16,18 +16,15 @@ jobs:
         uses: actions/setup-node@v2
         with: 
           node-version: '12'
-      - name: Git users
+      - name: 'Versioning'
         run: |
           git config --global user.email "chriscosentino@hotmail.com"
           git config --global user.name "ChrisCosentino"
-          
-      - name: 'Versioning'
-        run: |
           npm version patch -m 'update version' 
       - name: Push to protected branch 
         uses: CasperWA/push-protected@v2
         with: 
-          token: ${{ secrets.PUSH_TO_PROTECTED }}
+          token: ${{ secrets.PUSH_TO_PROTECTED_BRANCH }}
           branch: master
           unprotect_reviews: true
           
