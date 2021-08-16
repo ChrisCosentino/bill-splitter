@@ -22,21 +22,16 @@ jobs:
           git config user.name "$GITHUB_ACTOR"
           
       - uses: octokit/request-action@v2.x
-        id: create_check_run
+        id: get_latest_release
         with:
-          route: POST /repos/{owner}/{repo}/check-runs
+          route: GET /repos/{owner}/{repo}/releases/latest
           owner: octokit
           repo: request-action
-          name: "Test check run"
-          head_sha: ${{ github.sha }}
-          output: | # The | is significant!
-            title: Test check run title
-            summary: A summary of the test check run
-            images:
-              - alt: Test image
-                image_url: https://octodex.github.com/images/jetpacktocat.png
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - run: "echo latest release: ${{ steps.get_latest_release.outputs.data }}"
+      
+      
       - name: Branch protection OFF
         uses: octokit/request-action@v2.x
         with:
