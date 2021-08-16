@@ -20,7 +20,8 @@ jobs:
           node-version: '12'
       - name: 'Versioning'
         run: |
-
+          git config --global user.email "UpdateVersion@githubbot.com"
+          git config --global user.name "BumpVersion"
           npm version patch -m 'update version' 
       - name: Push to protected branch
         uses: CasperWA/push-protected@v2
