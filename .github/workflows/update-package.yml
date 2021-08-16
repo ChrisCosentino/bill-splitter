@@ -18,8 +18,8 @@ jobs:
           node-version: '12'
       - name: Git users
         run: |
-          git config user.email "chriscosentino@hotmail.com"
-          git config user.name "ChrisCosentino"
+          git config --global user.email "chriscosentino@hotmail.com"
+          git config --global user.name "ChrisCosentino"
           
       - name: 'Versioning'
         run: |
