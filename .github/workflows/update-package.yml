@@ -5,7 +5,7 @@ on:
     branches: 
      - "master"
     paths-ignore:
-      - 'package.json'
+      - '**.json'
 
 
 jobs: 
