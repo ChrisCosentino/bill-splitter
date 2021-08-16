@@ -10,11 +10,8 @@ jobs:
   bump-version: 
     runs-on: ubuntu-latest
     steps: 
-      - uses: actions/checkout@v2 
       - name: "Checkout code"
-        run: | 
-          git config --global user.email "chriscosentino@hotmail.com"
-          git config --global user.name "ChrisCosentino"
+        uses: actions/checkout@v2 
       - name: 'setup nodejs'
         uses: actions/setup-node@v2
         with: 
@@ -34,6 +31,7 @@ jobs:
             null 
       - name: 'Commit files'
         run: |
-          
+          git config --global user.email "chriscosentino@hotmail.com"
+          git config --global user.name "ChrisCosentino"
           npm version patch -m 'update version' 
           git push --force
