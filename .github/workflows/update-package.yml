@@ -21,25 +21,17 @@ jobs:
           git config user.email "$GITHUB_ACTOR@users.noreply.github.com"
           git config user.name "$GITHUB_ACTOR"
           
-
-      
-      
-      - name: Branch protection OFF
-        uses: octokit/request-action@v2.x
-        with:
-          route: PUT /repos/:repository/branches/master/protection
-          repository: ${{ github.repository }}
-          required_status_checks: |
-            null
-          enforce_admins: |
-            null
-          required_pull_request_reviews: |
-            null
-          restrictions: | 
-            null 
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: 'Versioning'
         run: |
           npm version patch -m 'update version' 
           git push 
+      - name: Push to protected branch 
+        uses: CasperWA/push-protected@v2
+        with: 
+          token: ${{ secrets.PUSH_TO_PROTECTED }}
+          branch: master
+          unprotected_reviews: true
+          
+
+
+
