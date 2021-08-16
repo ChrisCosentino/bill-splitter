@@ -19,7 +19,7 @@ jobs:
       - name: Branch protection OFF
         uses: octokit/request-action@v2.x
         with:
-          route: PUT /repos/:repository/branches/master/protection
+          route: PUT /repos/bill-splitter/branches/master/protection
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           repository: ${{ github.repository }}
           required_status_checks: |
