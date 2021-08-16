@@ -1,6 +1,6 @@
 {
   "name": "tip-calc",
-  "version": "0.1.8",
+  "version": "0.1.9",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.4",
