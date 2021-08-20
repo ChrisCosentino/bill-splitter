@@ -1,0 +1,14 @@
+name: Run After Bump
+
+on: 
+  workflow_run:
+    workflows: ["Bump Version"]
+    types: 
+      - completed
+      
+jobs: 
+  nofify: 
+    runs-on: ubuntu-latest
+    
+    steps:
+      - uses: actions:/checkout@v2
